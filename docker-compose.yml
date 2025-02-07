@@ -28,7 +28,7 @@ services:
     container_name: mysql_db
     restart: always
     environment:
-      MYSQL_DATABASE: hackmotion
+      MYSQL_DATABASE: laravel
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
@@ -48,7 +48,7 @@ services:
     depends_on:
       - backend
     environment:
-      - NUXT_PUBLIC_API_BASE=http://nginx/api
+      - NUXT_PUBLIC_API_BASE=http://localhost/api
 
 volumes:
   db_data:
